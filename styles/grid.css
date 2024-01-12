@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+ 
+}
+.container{
+    border: 2px solid green;
+    width: 80%;
+    margin:0 auto;
+   
+    display: flex;
+   
+    justify-content: space-between;
+    align-items: center;
+}
+.img-container{
+   border:2px solid red;
+   width:48%;
+   display: grid;
+   grid-template-columns: repeat(12,1fr);
+   grid-template-rows: repeat(4,1fr);
+   gap:3px;
+}
+.img-container img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grid-item1{
+    grid-column: 1/6 span;
+    grid-row: 1/span 4;
+}
+.grid-item2{
+    grid-column: 7/6 span;
+    grid-row:1/1 span;
+}
+.grid-item3{
+    grid-column: 7/6 span;
+    grid-row:2/1 span;
+}
+.grid-item4{
+    grid-column: 7/2 span;
+   grid-row:3/1 span;
+}
+.grid-item5{
+    grid-column: 9/2 span;
+    grid-row:3/1 span;
+}
+.grid-item6{
+    grid-column: 11/2 span;
+    grid-row:3/1 span;
+}
+.grid-item7{
+    grid-column: 7/12 span;
+    grid-row:4/1 span;
+}
+.text-container{
+    border:2px solid  skyblue;
+    width:48%;
+}
+.text-container h1,p{
+    border: 1px solid red;
+}
+
+/* media query codes start here */
+@media screen and (max-width:576px){
+    .container{
+        flex-direction: column;
+        width:100%;
+    }
+    .img-container,.text-container{
+        width:100%;
+    }
+    .img-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7,1fr);
+    }
+    /* .grid-item1{
+        grid-column: auto;
+        grid-row:;
+    }
+    .grid-item2{
+        grid-column: 1/1 span;
+        grid-row: 2/1span;
+    }
+    .grid-item3{
+        grid-column: 1/1 span;
+        grid-row: 3/1span;
+    }
+    .grid-item4{
+        grid-column: 1/1 span;
+        grid-row: 4/1span;
+    }
+    .grid-item5{
+        grid-column: 1/1 span;
+        grid-row: 5/1span;
+    }
+    .grid-item6{
+        grid-column: 1/1 span;
+        grid-row: 6/1span;
+    }
+    .grid-item7{
+        grid-column: 1/1 span;
+        grid-row: 7/1span;
+    } */
+    .img-container div{
+     grid-column: auto;
+     grid-row: auto;
+    }
+}
+
+
